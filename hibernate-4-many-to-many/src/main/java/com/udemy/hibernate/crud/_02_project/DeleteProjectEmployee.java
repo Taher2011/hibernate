@@ -1,4 +1,4 @@
-package com.udemy.hibernate.crud._01_employee;
+package com.udemy.hibernate.crud._02_project;
 
 import java.text.ParseException;
 
@@ -6,10 +6,10 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-import com.udemy.entity.Employee;
+import com.udemy.entity.Project;
 import com.udemy.sessionfactory.SessionFactoryUtil;
 
-public class DeleteEmployeeProject {
+public class DeleteProjectEmployee {
 
 	public static void main(String[] args) throws ParseException {
 
@@ -24,9 +24,9 @@ public class DeleteEmployeeProject {
 			// start a transaction
 			Transaction trx = session.beginTransaction();
 
-			Employee employee1 = session.get(Employee.class, 5);
-			if (employee1 != null) {
-				session.delete(employee1);
+			Project project1 = session.get(Project.class, 1);
+			if (project1 != null) {
+				session.delete(project1);
 			}
 
 			// commit transaction

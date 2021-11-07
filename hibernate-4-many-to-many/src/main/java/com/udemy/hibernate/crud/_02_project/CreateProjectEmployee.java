@@ -36,8 +36,8 @@ public class CreateProjectEmployee {
 
 			project1.addEmployee(employee1);
 
-			session.save(project1);
-			session.save(project2);
+			session.persist(project1);
+			session.persist(project2);
 
 			// commit transaction
 			trx.commit();
