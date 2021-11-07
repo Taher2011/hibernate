@@ -48,10 +48,20 @@ public class States {
 
 			student2.setEmail("tushar@gmail.com");
 
+			// session.update(student1);
+			// Exception occur at line 51 due to, "a 'student2' object with
+			// the same identifier i.e. id=1 value was already associated with the session
+			// and 'student1' object also have id=1".
+
 			session.update(student2); // detach to persistent state i.e. once session is opened object is associated
 										// with session and database.
 
 			session.delete(student2); // removed state i.e object is associated with session but not with database.
+			
+			// session.update(student1);
+			// Exception occur at line 61 due to, "a 'student2' object with
+			// the same identifier i.e. id=1 value was already associated with the session
+			// and 'student1' object also have id=1".
 
 			trx.commit();
 
